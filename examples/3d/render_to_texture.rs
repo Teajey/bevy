@@ -140,6 +140,20 @@ fn setup(
             .looking_at(Vec3::default(), Vec3::Y),
         ..default()
     });
+
+    commands.spawn_bundle(NodeBundle {
+        style: Style {
+            position: UiRect {
+                top: Val::Px(0.),
+                left: Val::Px(0.),
+                ..default()
+            },
+            size: Size::new(Val::Px(100.), Val::Px(100.)),
+            ..default()
+        },
+        color: Color::GREEN.into(),
+        ..default()
+    });
 }
 
 /// Rotates the inner cube (first pass)
